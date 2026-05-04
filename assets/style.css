@@ -5,7 +5,7 @@
     --primary-color: #2E2B8F;
     --accent-color: #FFC247;
     --text-dark: #0A0A23;
-    --bg-light: #F5F7FB;
+    --bg-light: #ffffff;
     --gray-muted: #5a5a70;
 }
 
@@ -80,7 +80,7 @@ body {
 }
 
 /* ===============================
-   HERO SECTION - EXTRA LARGE IMAGE
+   HERO SECTION
 ================================= */
 .hero {
     min-height: calc(100vh - 90px);
@@ -160,7 +160,7 @@ body {
     color: #211e6b;
 }
 
-/* Right side image - EXTRA LARGE size covering more than half the page */
+/* Right side image */
 .hero-image-col {
     display: flex;
     justify-content: flex-end;
@@ -182,13 +182,12 @@ body {
     width: 100%;
     margin-right: calc(-1 * (100vw - 100%) / 2);
     margin-bottom: -6px;
-    /* BLUE BORDER around the image box */
     border: 20px solid var(--primary-color);
     border-right: none;
     border-bottom: none;
 }
 
-/* Image Overlay Container - for boy picture + mobile overlay */
+/* Image Overlay Container - for HERO only */
 .image-overlay-container {
     position: relative;
     display: block;
@@ -196,7 +195,7 @@ body {
     overflow: hidden;
 }
 
-/* Boy picture (base/full image) */
+/* Boy picture */
 .boy-img {
     display: block;
     width: 100%;
@@ -204,28 +203,16 @@ body {
     object-fit: cover;
 }
 
-/* Mobile picture overlay - positioned on LEFT SIDE CENTER with equal top/bottom gaps */
+/* Mobile picture overlay - THIS IS THE MOBILE IMAGE */
 .mobile-overlay-img {
     position: absolute;
     top: 50%;
     left: 20%;
     transform: translateY(-50%);
-    width: 45%;
+    width: 40%;
     height: auto;
-    max-height: 80%;
+    max-height: 70%;
     object-fit: contain;
-    z-index: 2;
-}
-
-/* Alternative: If you want the mobile image to cover full left side height */
-.mobile-overlay-img-full {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 45%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
     z-index: 2;
 }
 
@@ -238,7 +225,7 @@ body {
     box-shadow: -8px 20px 35px -12px rgba(0, 0, 0, 0.12);
 }
 
-/* Feature strip (Dashboard, Scan, etc.) */
+/* Feature strip */
 .feature-strip {
     background: white;
     border-radius: 70px;
@@ -272,9 +259,9 @@ body {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Full height row alignment */
 html, body {
     height: 100%;
 }
@@ -284,7 +271,7 @@ html, body {
     height: 100%;
 }
 
-/* Extra Large desktop refinement - EVEN LARGER image */
+/* Large desktop refinement */
 @media (min-width: 1200px) {
     .hero-image-box {
         max-width: 920px;
@@ -317,15 +304,255 @@ html, body {
     }
 }
 
-/* Responsive adjustments for mobile overlay */
+/* Mobile overlay responsive */
 @media (max-width: 992px) {
     .mobile-overlay-img {
-        width: 50%;
+        width: 45%;
+        left: 3%;
     }
 }
 
 @media (max-width: 768px) {
     .mobile-overlay-img {
-        width: 60%;
+        width: 50%;
+        left: 0;
+    }
+}
+/* ===============================
+   TESTIMONIALS SECTION - CENTERED LOGOS WITH LARGER SIZES
+================================= */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: #ffaa00;
+}
+
+/* Container */
+.testimonials-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Title - LEFT ALIGNED */
+.section-title {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0A0A23;
+    letter-spacing: -0.02em;
+    max-width: 700px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Testimonials Grid - 4 COLUMNS IN ONE ROW */
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+/* Individual Testimonial Card */
+.testimonial-item {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Star Rating */
+.star-rating {
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.star {
+    color: #FFC247;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.star.empty {
+    color: #E0E0E0;
+}
+
+/* Testimonial Quote Text */
+.testimonial-quote {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #5a5a70;
+    margin-bottom: 20px;
+    font-style: normal;
+    flex-grow: 1;
+}
+
+/* Testimonial Author Name */
+.testimonial-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2E2B8F;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+/* Featured In Section - LABEL LEFT, LOGOS CENTERED */
+.featured-in {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.featured-label {
+    font-size: 14px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #0b0b0b;
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.featured-brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+/* Brand Logo Images - EXTRA LARGE SIZE */
+.brand-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.brand-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+
+/* Large Desktop (1200px and above) - 4 columns */
+@media (min-width: 1200px) {
+    .testimonials-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Tablet (992px to 1199px) - 2 columns */
+@media (max-width: 1199px) and (min-width: 769px) {
+    .testimonials-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .section-title h2 {
+        font-size: 32px;
+    }
+    
+    .brand-logo {
+        height: 65px;
+    }
+    
+    .featured-brands {
+        gap: 55px;
+    }
+}
+
+/* Tablet Small (768px to 991px) - 2 columns */
+@media (max-width: 992px) {
+    .testimonials-section {
+        padding: 60px 0;
+    }
+    
+    .section-title h2 {
+        font-size: 30px;
+    }
+    
+    .testimonials-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .featured-brands {
+        gap: 50px;
+    }
+    
+    .brand-logo {
+        height: 60px;
+    }
+}
+
+/* Mobile (below 768px) - 1 column */
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 50px 0;
+    }
+    
+    .section-title h2 {
+        font-size: 24px;
+        padding: 0;
+    }
+    
+    .testimonials-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .testimonial-item {
+        padding: 25px;
+    }
+    
+    .testimonial-quote {
+        font-size: 14px;
+    }
+    
+    .featured-brands {
+        gap: 40px;
+        row-gap: 30px;
+    }
+    
+    .brand-logo {
+        height: 50px;
+    }
+}
+
+/* Small Mobile (below 480px) */
+@media (max-width: 480px) {
+    .testimonials-section {
+        padding: 40px 0;
+    }
+    
+    .section-title h2 {
+        font-size: 20px;
+    }
+    
+    .featured-brands {
+        gap: 30px;
+    }
+    
+    .brand-logo {
+        height: 42px;
     }
 }
