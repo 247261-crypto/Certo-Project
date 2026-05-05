@@ -926,7 +926,7 @@ html, body {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background-color: #2E2B8F;
+    background-color: #ffc800;
     color: white;
     padding: 14px 32px;
     border-radius: 50px;
@@ -1077,5 +1077,384 @@ html, body {
     
     .feature-description {
         font-size: 14px;
+    }
+}
+
+/* ===============================
+   SECTIONS LAYOUT - First 2 in Row, Third as Column (Centered)
+================================= */
+.sections-wrapper {
+    padding: 60px 0 40px 0;
+    background-color: #FFFFFF;  /* CHANGED TO WHITE */
+}
+
+.sections-wrapper .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* First Row - Two Columns (Side by Side) */
+.row-two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Second Row - One Column (Full Width) */
+.row-one-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* ===============================
+   SECTION 1 - READ OUR STORY
+================================= */
+.story-box {
+    background-color: white;
+    padding: 40px 35px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.story-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   SECTION 2 - HELP CENTER
+================================= */
+.help-box {
+    background-color: white;
+    padding: 40px 35px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.help-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   SECTION 3 - IS SOMEONE SPYING ON YOUR PHONE? (CENTERED)
+================================= */
+.spy-alert-box {
+    background-color: white;
+    padding: 50px 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.spy-alert-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Common Box Styles for Left Aligned Sections */
+.box-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0A0A23;
+    margin-bottom: 15px;
+    letter-spacing: -0.01em;
+}
+
+.box-description {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #5a5a70;
+    margin-bottom: 25px;
+}
+
+/* Centered Box Styles for Section 3 */
+.box-title-center {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0A0A23;
+    margin-bottom: 15px;
+    letter-spacing: -0.01em;
+    text-align: center;
+}
+
+.box-description-center {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #5a5a70;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Button for Read our story - About us */
+.btn-story {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #2E2B8F;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-story:hover {
+    background-color: #211e6b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Button for Help Center - Visit help center */
+.btn-help {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: #2E2B8F;
+    padding: 10px 26px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #2E2B8F;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-help:hover {
+    background-color: rgba(46, 43, 143, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Buttons Container for Spy Alert - ROW LAYOUT */
+.spy-buttons-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* Primary Button - Get Certo for iPhone */
+.btn-spy-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #2E2B8F;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-spy-primary:hover {
+    background-color: #211e6b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Outline Button - Get Certo for Android */
+.btn-spy-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: transparent;
+    color: #2E2B8F;
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #2E2B8F;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-spy-outline:hover {
+    background-color: rgba(46, 43, 143, 0.08);
+    transform: translateY(-2px);
+}
+
+/* ===============================
+   CERTO LOGO FOOTER
+================================= */
+.certo-footer {
+    padding: 30px 0 20px 0;
+    text-align: center;
+    background-color: #FFFFFF;  /* CHANGED TO WHITE */
+}
+
+.certo-logo-box {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.certo-logo-text {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0A0A23;
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
+}
+
+.certo-logo-text::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #2E2B8F;
+    border-radius: 2px;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+
+/* Tablet (768px to 992px) */
+@media (max-width: 992px) {
+    .sections-wrapper {
+        padding: 50px 0 30px 0;
+    }
+    
+    .story-box,
+    .help-box,
+    .spy-alert-box {
+        padding: 35px 30px;
+    }
+    
+    .box-title {
+        font-size: 22px;
+    }
+    
+    .box-title-center {
+        font-size: 26px;
+    }
+    
+    .btn-spy-primary,
+    .btn-spy-outline {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+    
+    .certo-logo-text {
+        font-size: 28px;
+    }
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+    .sections-wrapper {
+        padding: 40px 0 30px 0;
+    }
+    
+    /* First row becomes column on mobile */
+    .row-two-columns {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .row-one-column {
+        margin-bottom: 40px;
+    }
+    
+    .story-box,
+    .help-box {
+        text-align: center;
+        padding: 30px 25px;
+    }
+    
+    .spy-alert-box {
+        padding: 35px 25px;
+    }
+    
+    .btn-story,
+    .btn-help {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Buttons become column on mobile */
+    .spy-buttons-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-spy-primary,
+    .btn-spy-outline {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+    }
+    
+    .box-title-center {
+        font-size: 24px;
+    }
+    
+    .box-description-center {
+        font-size: 15px;
+    }
+    
+    .certo-logo-text {
+        font-size: 26px;
+    }
+}
+
+/* Small Mobile (below 480px) */
+@media (max-width: 480px) {
+    .story-box,
+    .help-box,
+    .spy-alert-box {
+        padding: 25px 20px;
+    }
+    
+    .box-title {
+        font-size: 20px;
+    }
+    
+    .box-title-center {
+        font-size: 22px;
+    }
+    
+    .box-description,
+    .box-description-center {
+        font-size: 14px;
+    }
+    
+    .btn-story,
+    .btn-help,
+    .btn-spy-primary,
+    .btn-spy-outline {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+    
+    .certo-logo-text {
+        font-size: 24px;
     }
 }
