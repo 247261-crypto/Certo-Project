@@ -818,11 +818,11 @@ html, body {
 }
 
 /* ===============================
-   STOP MOBILE SPYWARE SECTION 
+   STOP MOBILE SPYWARE SECTION WITH IMAGES
 ================================= */
 .spyware-section {
     padding: 100px 0;
-    background-color: #ffffff;
+    background-color: #FF8C00;
     position: relative;
 }
 
