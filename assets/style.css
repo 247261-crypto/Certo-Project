@@ -1418,7 +1418,7 @@ html, body {
 }
 
 /* ===============================
-   LATEST INSIGHTS SECTION WITH IMAGES
+   LATEST INSIGHTS SECTION WITH TAGS ABOVE IMAGES
 ================================= */
 .insights-section {
     padding: 80px 0;
@@ -1445,19 +1445,38 @@ html, body {
     margin-bottom: 20px;
 }
 
-/* Tags Container */
-.insights-tags {
+/* Blog Grid - 3 Columns */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Blog Card */
+.blog-card {
+    background-color: transparent;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Blog Tags - ABOVE THE IMAGE */
+.blog-tags {
     display: flex;
-    justify-content: center;
-    gap: 15px;
     flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 .tag {
     display: inline-block;
     padding: 6px 16px;
     border-radius: 30px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
@@ -1477,28 +1496,10 @@ html, body {
     color: white;
 }
 
-/* Blog Grid - 3 Columns */
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-/* Blog Card */
-.blog-card {
-    background-color: transparent;
-    padding: 0;
-    transition: all 0.3s ease;
-}
-
-.blog-card:hover {
-    transform: translateY(-5px);
-}
-
 /* Blog Image Container */
 .blog-image {
     width: 100%;
-    height: 200px;
+    height: 220px;
     overflow: hidden;
     border-radius: 16px;
     margin-bottom: 20px;
@@ -1538,6 +1539,34 @@ html, body {
     margin: 0;
 }
 
+/* View All Insights Button - Centered */
+.insights-button-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: #2E2B8F;
+    padding: 12px 32px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #2E2B8F;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-view-all:hover {
+    background-color: rgba(46, 43, 143, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* ===============================
    RESPONSIVE DESIGN
 ================================= */
@@ -1567,6 +1596,11 @@ html, body {
     .blog-excerpt {
         font-size: 14px;
     }
+    
+    .btn-view-all {
+        padding: 10px 28px;
+        font-size: 14px;
+    }
 }
 
 /* Mobile (below 768px) */
@@ -1579,18 +1613,10 @@ html, body {
         font-size: 32px;
     }
     
-    .insights-tags {
-        gap: 12px;
-    }
-    
-    .tag {
-        padding: 5px 14px;
-        font-size: 12px;
-    }
-    
     .blog-grid {
         grid-template-columns: 1fr;
         gap: 30px;
+        margin-bottom: 40px;
     }
     
     .blog-card {
@@ -1601,11 +1627,25 @@ html, body {
         height: 200px;
     }
     
+    .blog-tags {
+        margin-bottom: 12px;
+    }
+    
+    .tag {
+        padding: 5px 14px;
+        font-size: 11px;
+    }
+    
     .blog-title {
         font-size: 20px;
     }
     
     .blog-excerpt {
+        font-size: 14px;
+    }
+    
+    .btn-view-all {
+        padding: 10px 24px;
         font-size: 14px;
     }
 }
@@ -1629,6 +1669,11 @@ html, body {
     }
     
     .blog-excerpt {
+        font-size: 13px;
+    }
+    
+    .btn-view-all {
+        padding: 8px 20px;
         font-size: 13px;
     }
 }
