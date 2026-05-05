@@ -1764,9 +1764,19 @@ html, body {
     display: inline-block;
 }
 
-/* Newsletter Section */
+/* Newsletter Section - WITH ROUNDED BOX */
 .footer-newsletter {
     text-align: left;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px 35px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.footer-newsletter:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .newsletter-title {
@@ -1919,6 +1929,9 @@ html, body {
     
     .footer-newsletter {
         text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 25px 30px;
     }
     
     .footer-logo-text {
@@ -1955,6 +1968,11 @@ html, body {
     
     .icons-image {
         max-width: 140px;
+    }
+    
+    .footer-newsletter {
+        padding: 20px 25px;
+        max-width: 100%;
     }
     
     .newsletter-form {
@@ -2009,6 +2027,10 @@ html, body {
     
     .icons-image {
         max-width: 120px;
+    }
+    
+    .footer-newsletter {
+        padding: 20px;
     }
     
     .newsletter-title {
